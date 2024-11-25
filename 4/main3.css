@@ -1,0 +1,38 @@
+
+.page__element{
+    margin-bottom: 50px;
+}
+.blog-container{
+    width: 900px;
+    margin: 0 auto;
+}
+.blog-container .blog-header .blog-title {
+    color: #333;
+    font-size: 28px;
+}
+
+.blog-container .blog-content .blog-post{
+    border: 1px solid red;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    padding:10px;
+}
+
+.blog-container .blog-content .blog-post .post-title {
+    color: #444;
+    font-size: 24px;
+}
+
+.blog-container .blog-content .blog-post .post-text {
+    color: #666;
+    font-size: 16px;
+}
+
+.blog-container .blog-footer .footer-text {
+    color: #999;
+    font-size: 14px;
+}
+
+#ddd .bcde span{
+    color: green;
+}

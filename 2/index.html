@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вторая практическая работа">
+    <title>Вторая практическая</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .main_form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            border: 2px solid rgb(151, 99, 247);
+            border-radius: 2rem;
+            padding: 1rem;
+        }
+
+        .subform {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            gap: 6rem;
+        }
+
+        .form_el {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 0.5rem;
+        }
+
+        .input {
+            border: 2px solid aqua;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        input[type="date"] {
+            border: 2px solid aqua;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+            appearance: none;
+        }
+
+        button {
+            background-color: aqua;
+            border: 1px solid rgb(43, 17, 189);
+            border-radius: 3rem;
+            padding: 1rem 3rem;
+            margin: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="main_form" action="/main-form" method="post">
+        <h2>Форма</h2>
+
+        <div class="subform">
+            <div class="form_el">
+                <label for="name">
+                    Ваше ФИО:
+                    <input required id="name" name="name" class="input" type="text" placeholder="ФИО">
+                </label>
+
+                <label for="email">
+                    Ваш email:
+                    <input id="email" name="email" class="input" type="email" placeholder="Email">
+                </label>
+
+                <label for="phone">
+                    Ваш номер телефона:
+                    <input id="phone" name="phone" class="input" type="tel" placeholder="Номер телефона">
+                </label>
+
+                <label for="password">
+                    Введите пароль:
+                    <input id="password" name="password" class="input" type="password" placeholder="Пароль">
+                </label>
+            </div>
+            <div class="form_el">
+                <label for="blood_type">
+                    Ваша группа крови:
+                    <input disabled id="blood_type" name="blood_type" class="input" type="number"
+                        placeholder="Группа крови">
+                </label>
+
+                <label for="birth_date">
+                    Ваша дата рождения:
+                    <input readonly id="birth_date" name="birth_date" class="input" type="date"
+                        placeholder="Дата рождения">
+                </label>
+
+
+                <input id="user_id" name="user_id" type="hidden" value="20">
+
+            </div>
+        </div>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 13</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .block1__img {
+            display: flex;
+            max-width: 100%;
+            object-fit: contain;
+            flex-wrap: wrap;
+        }
+
+        .block2__svg {
+            flex-shrink: 0;
+        }
+
+        .block3 .col-1 {
+            display: flex;
+            flex-basis: 300px;
+            flex-shrink: 0;
+        }
+
+        .block3 .col-2 {
+            flex-grow: 1;
+        }
+
+        .item2 {
+            justify-content: space-between;
+        }
+
+        .item2__body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .item2__bg {
+            /* flex-shrink: 0; */
+        }
+
+        .item2__footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="heading">Задача 1</h2>
+    <div class="container">
+        <div class="block1">
+            <img class="block1__img" src="https://media.istockphoto.com/vectors/facial-muscles-of-the-female-vector-id1190840194?k=20&m=1190840194&s=612x612&w=0&h=ov6P7U2meVYVRKifasN-gsSaNb3FNXyVlXVMt5RbVPM=" alt="">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="heading">Задача 2</h2>
+    <div class="container">
+        <div class="block2">
+            <svg class="block2__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="heading">Задача 3</h2>
+    <div class="container">
+        <div class="block3">
+            <div class="col-1">
+                ЛЕВАЯ ЧАСТЬ, ШИРИНА должна быть 300px
+            </div>
+            <div class="col-2">
+                <p> ПРАВАЯ ЧАСТЬ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil blanditiis aspernatur ex, ut eveniet laborum iusto labore nostrum assumenda reprehenderit maxime rerum quasi saepe possimus dolore reiciendis totam autem!</p>
+            </div>
+        </div>
+
+        <div class="block block3">
+            <div class="col-1">
+                ЛЕВАЯ ЧАСТЬ, ШИРИНА должна быть 300px
+            </div>
+            <div class="col-2">
+                <p>ПРАВАЯ ЧАСТЬ Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="heading">Задача 4 - решить проблему</h2>
+    <div class="container">
+        <div class="items2">
+            <div class="item2">
+                <div class="item2__bg"></div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 2</h2>
+                    <p class="item2__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="item2__bg"></div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 2</h2>
+                    <p class="item2__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="item2__bg"></div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 3</h2>
+                    <p class="item2__content">loremLorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

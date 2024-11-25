@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вторая практическая">
+    <title>Вторая практическая</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            padding: 1rem;
+            border: 1px solid gray;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkbox_el {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/api/form" method="post">
+        <fieldset>
+            <legend>Любимые категории фильмов</legend>
+
+            <div class="checkbox_el">
+                <input type="checkbox" id="action" name="category" value="action">
+                <label for="action">Боевик</label>
+            </div>
+
+            <div class="checkbox_el">
+                <input type="checkbox" id="adventure" name="category" value="adventure">
+                <label for="adventure">Приключение</label>
+            </div>
+
+            <div class="checkbox_el">
+                <input type="checkbox" id="drama" name="category" value="drama">
+                <label for="drama">Драма</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ваш пол:</legend>
+            <input type="radio" name="sex" value="male">Мужчина
+            <input type="radio" name="sex" value="female">Женщина
+        </fieldset>
+
+        <label for="leisure">
+            Чем вы занимаетесь:
+            <select name="leisure" id="leisure" multiple>
+                <option value="student">Учеба</option>
+                <option value="work">Работа</option>
+                <option value="hobby">Хобби</option>
+            </select>
+        </label>
+
+        <label for="file">
+            Ваше резюме:
+            <input type="file" id="file" name="file" accept="image/png, image/jpeg">
+        </label>
+
+        <label for="barrel_color">
+            Цвет бочки с горючим:
+            <input type="color" id="barrel_color" name="barrel_color" value="#e66465" />
+        </label>
+
+        <label for="description">Опишите свою жизнь:</label>
+        <textarea name="description" id="description" rows="10" cols="33" placeholder="Только не нужно врать!"></textarea>
+
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+
+</html>

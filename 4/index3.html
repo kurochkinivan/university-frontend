@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main3.css">
+    <style>
+        /* ТУТ ПИШЕМ CSS, main3.css не меняем */
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        .user-content > h2 {
+            color: coral;
+        }
+
+        .blog-container .blog-header .blog-title {
+            color: #0000FF;
+        }
+
+        .blog-container .blog-content .blog-post .post-title,
+        .blog-container .blog-post .post-title {
+            font-size: 26px;
+        }
+
+        .blog-container .blog-post .post-title {
+            color: #444;
+        }
+
+        .blog-container .blog-footer .footer-text,
+        .blog-container .blog-content .blog-post .post-text,
+        .blog-container p {
+            color: #333;
+        }
+
+        .blog-container .blog-post {
+            border: 1px solid red;
+            margin-bottom: 10px;
+            border-radius: 16px;
+            padding: 10px;
+        }
+
+        .list, #ddd .bcde .list span {
+            color: blue;
+        }
+
+        .ordered-list li + li {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body class="page">
+    <div class="blog-container">
+        <header class="blog-header">
+            <h1 class="blog-title">Мой удивительный блог</h1>
+        </header>
+
+        <div class="page__element">
+            <main class="blog-content">
+                <article class="blog-post">
+                    <h2 class="post-title">Первая статья</h2>
+                    <p class="post-text">Это текст первой статьи.</p>
+                </article>
+                <article class="blog-post">
+                    <h2 class="post-title">Вторая статья</h2>
+                    <p class="post-text">Это текст второй статьи.</p>
+                </article>
+            </main>
+
+            <article class="blog-post">
+                <h2 class="post-title">Третья статья</h2>
+                <p class="post-text">Это текст третей статьи.</p>
+            </article>
+
+        </div>
+
+        <hr>
+
+        <div id="ddd" class="abc page__element">
+            <div class="bcde">
+                <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span> Sint similique iusto
+                    voluptatibus? Minus ratione quidem vitae consectetur nesciunt officiis repellat modi dignissimos
+                    nemo accusamus ex, id possimus rem sapiente nisi!</p>
+                <hr>
+                <ul class="list">
+                    <li><span>Task1.</span> Description</li>
+                    <li><span>Task2.</span> Description</li>
+                    <li><span>Task3.</span> Description</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page__element">
+            <ol class="ordered-list">
+                <li>Задача 1</li>
+                <li>Задача 2</li>
+                <li>Задача 3</li>
+                <li>Задача 4</li>
+                <li>Задача 5</li>
+            </ol>
+        </div>
+
+        <div class="page__element">
+            <div class="user-content">
+                <h2>Заголовок 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum in, quaerat doloribus nisi corrupti
+                    ut quod natus accusamus at dolorem pariatur quis voluptatibus nihil repellendus nobis aperiam
+                    aspernatur optio fuga!</p>
+                <h2>Заголовок 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum in, quaerat doloribus nisi corrupti
+                    ut quod natus accusamus at dolorem pariatur quis voluptatibus nihil repellendus nobis aperiam
+                    aspernatur optio fuga!</p>
+                <div>
+                    <h2>Заголовок 3</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum in, quaerat doloribus nisi
+                        corrupti ut quod natus accusamus at dolorem pariatur quis voluptatibus nihil repellendus nobis
+                        aperiam aspernatur optio fuga!</p>
+                    <div>
+                        <h2>Заголовок 4</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum in, quaerat doloribus nisi
+                            corrupti ut quod natus accusamus at dolorem pariatur quis voluptatibus nihil repellendus
+                            nobis aperiam aspernatur optio fuga!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="blog-footer">
+            <p class="footer-text">© 2024 Мой блог</p>
+        </footer>
+    </div>
+</body>
+
+</html>

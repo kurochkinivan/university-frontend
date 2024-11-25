@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid__element {
+            border: 1px solid red;
+            padding: 1rem;
+        }
+
+        .emoji {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <hgroup>
+        <h1><span>Задача: исправить разметку</span></h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta perspiciatis eum illo, dicta expedita
+            veniam incidunt dolores delectus excepturi placeat reprehenderit, nihil quibusdam asperiores quas quo aut
+            voluptatum laboriosam?
+        </p>
+    </hgroup>
+
+    <div class="grid container">
+        <a href="#" class="grid__element">
+            <p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> Molestiae blanditiis quo natus sed
+                ad
+                autem, consectetur deleniti dolores suscipit repellat, ipsa exercitationem id, quis magnam dolor
+                corporis! Error, nulla voluptatem.
+            </p>
+        </a>
+        <p class="grid__element">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae blanditiis quo natus sed ad autem,
+            consectetur deleniti dolores suscipit repellat, ipsa exercitationem id, quis magnam dolor corporis!
+            <a href="#">Читать дальше</a>
+        </p>
+    </div>
+
+    <ol>
+        <li>Название списка 1</li>
+        <li>Название списка 2</li>
+        <li>Название списка 3</li>
+        <li>Название списка 4</li>
+    </ol>
+
+    <div class="emoji">
+        <span>😃</span>
+        <span>😁</span>
+        <span>🤬</span>
+    </div>
+    <p>
+        <img src="https://cs5.pikabu.ru/post_img/big/2015/06/04/11/1433446202_1725992411.jpg" width="500" alt="космос">
+        Описание изображения
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5. Часть 1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        img {
+            max-inline-size: 100%;
+            block-size: auto;
+        }
+
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .page__element {
+            margin-top: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .grid__img {
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .grid__media {
+            position: relative;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        th {
+            border: 1px solid black;
+        }
+
+        .list-links__item {
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .grid__media--color1::after,
+        .grid__media--color2::after,
+        .grid__media--color3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .grid__media--color1::after {
+            background-color: rgb(255 0 0 / 40%);
+        }
+
+        .grid__media--color2::after {
+            background-color: rgb(0 0 255 / 40%);
+        }
+
+        .grid__media--color3::after {
+            background-color: rgb(0 0 0 / 40%);
+        }
+
+        ::selection {
+            background-color: green;
+        }
+
+        ::placeholder {
+            color: red;
+        }
+
+        input:disabled, 
+        input:read-only {
+            color: blue;
+            font-size: 20px;
+        }
+
+        .list-links__item:hover {
+            text-decoration: underline;
+        }
+
+        .list-links__item:link {
+            color: red;
+        }
+
+        .list-links__item:visited {
+            color: #c9c9c9;
+        }
+
+        .list-links__item:active {
+            color: #4CAF50;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background-color: red;
+        }
+
+    </style>
+</head>
+
+<body class="page">
+
+    <div class="container">
+
+        <div class="grid">
+            <div class="grid__item">
+                <div class="grid__media grid__media--color1">
+                    <img class="grid__img" src="images/img1.jpg" alt="">
+                </div>
+            </div>
+            <div class="grid__item">
+                <div class="grid__media grid__media--color2">
+                    <img class="grid__img" src="images/img2.jpg" alt="">
+                </div>
+            </div>
+            <div class="grid__item">
+                <div class="grid__media grid__media--color3">
+                    <img class="grid__img" src="images/img3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="page__element">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ipsum officia facere assumenda, vel
+                    quam error quisquam totam corporis optio eum, earum quidem aspernatur porro soluta cum quae itaque
+                    nam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ipsum officia facere assumenda, vel
+                    quam error quisquam totam corporis optio eum, earum quidem aspernatur porro soluta cum quae itaque
+                    nam.</p>
+            </div>
+        </div>
+
+        <div class="page__element">
+            <form action="">
+                <div>
+                    <label for="first_name">Имя</label>
+                    <input id="first_name" type="text" placeholder="Имя" value="">
+                </div>
+                <div>
+                    <label for="last_name">Фамилия</label>
+                    <input id="last_name" type="text" placeholder="Фамилия" value="">
+                </div>
+                <div>
+                    <label for="patronymic">Отчетсво</label>
+                    <input disabled id="patronymic" type="text" placeholder="Отчетсво" value="Иванович">
+                </div>
+                <div>
+                    <label for="age">Возраст</label>
+                    <input readonly id="age" type="number" placeholder="Возраст" value="19">
+                </div>
+            </form>
+        </div>
+
+        <div class="page__element">
+            <ul class="list-links">
+                <li><a class="list-links__item" href="https://example1.com/">Ссылка 1</a></li>
+                <li><a class="list-links__item" href="https://example2.com/">Ссылка 2</a></li>
+                <li><a class="list-links__item" href="https://example3.com/">Ссылка 3</a></li>
+            </ul>
+        </div>
+
+        <div class="page__element">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

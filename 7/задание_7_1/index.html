@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16</title>
+    <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            --header-height: 60px;
+        }
+        h1{
+            margin: 0;
+        }
+        img {
+            display: block;
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+        }
+        .container{
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .banner{
+            border: 1px solid red;
+            padding: 20px;
+        }
+        .banner__wrapper{
+            height: 300px;
+        }
+        .banner__img{
+            height: 340px;
+        }
+
+        .banner__content{
+
+        }
+        .banner__media{
+
+        }
+
+
+        .items2{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .item2{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+        .item2__name{
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .item2__content{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .item2__footer{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        .item2__bg{
+            height: 150px;
+            background-color: black;
+        }
+        .item2__body{
+            padding: 10px;
+        }
+
+        .icon{
+            width: 40px;
+            background: red;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 26px;
+            padding: 7px;
+        }
+        .item2__bg{
+
+        }
+        .item2__icon1{
+
+        }
+        .item2__icon2{
+
+        }
+        .item2__icon3{
+
+        }
+        .item2__badge{
+
+        }
+        .item2__badge2{
+
+        }
+        .badge{
+            color:white;
+            background-color: #969696;
+            border-bottom: 1px solid #797979;
+            text-align: center;
+        }
+
+        .header{
+            text-align: center;
+            background-color: cadetblue;
+            padding: 10px;
+            height: var(--header-height);
+        }
+
+        .chars-block p{
+            font-size: 20px;
+            margin-bottom: 100px;
+        }
+
+        .chars-block__header{
+            padding: 10px;
+            background-color: aquamarine;
+        }
+
+        /* Задание 1 */
+
+        .banner {
+            position: relative;
+        }
+
+        .banner__media {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            z-index: -1;
+        }
+
+        .banner__content {
+            background-color: black;
+            color: white;
+            padding: 1em;
+            width: 70%;
+        }
+
+        /* Задание 2 */
+
+        .item2__bg {
+            position: relative;
+        }
+
+        .item2__icon1,
+        .item2__icon2,
+        .item2__icon3, 
+        .item2__badge, 
+        .item2__badge2 {
+            position: absolute;
+        }
+
+        .item2__icon1 {
+            inset-inline-start: 50%;
+            translate: -50%;
+        }
+
+        .item2__icon2 {
+            inset-inline-start: 50%;
+            inset-block-start: 50%;
+            translate: -50% -50%;
+        }
+
+        .item2__badge {
+            inset-block-end: 0;
+            inline-size: 100%;
+        }
+
+        .item2__icon3 {
+            inset-inline-end: 0;
+            translate: 50% -50%;
+            z-index: 1;
+        }
+
+        .item2__badge2 {
+            writing-mode: vertical-lr;
+            inline-size: 100%;
+            scale: -1;
+        }
+
+        /* Задание 3 */
+
+        .header {
+            position: sticky;
+            inset-block-start: 0;
+            z-index: 3;
+        }
+
+        .chars-block__header {
+            position: sticky;
+            top: var(--header-height);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>THIS HEADER</h1>
+    </header>
+
+
+    <div class="container">
+        <div class="banner">
+            <div class="banner__wrapper">
+                <div class="banner__content">
+                    <h1>Текст</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, assumenda est excepturi, perspiciatis et cupiditate ducimus enim delectus quidem vitae alias quas quia aperiam iusto itaque voluptatibus sint? Voluptatum, quos.</p>
+                </div>
+            </div>
+            <div class="banner__media">
+                <img class="banner__img" src="apple.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="items2">
+            <div class="item2">
+                <div class="item2__bg">
+                    <div class="item2__icon1">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                       </div>
+                    </div>
+
+
+
+                </div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 2</h2>
+                    <p class="item2__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="item2__bg">
+
+                    <div class="item2__icon2">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                       </div>
+                    </div>
+
+                    <div class="item2__badge">
+                        <div class="badge">скидка 50%</div>
+                    </div>
+
+                </div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 2</h2>
+                    <p class="item2__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="item2__bg">
+
+                    <div class="item2__icon3">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                       </div>
+                    </div>
+
+                    <div class="item2__badge2">
+                        <div class="badge">скидка 50%</div>
+                    </div>
+
+                </div>
+                <div class="item2__body">
+                    <h2 class="item2__name">Title 3</h2>
+                    <p class="item2__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item2__footer">Read More</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="chars-block">
+            <h2 class="chars-block__header">А</h2>
+            <p>аня</p>
+            <p>алиса</p>
+            <p>алекс</p>
+            <p>аптека</p>
+            <p>автобус</p>
+            <p>америка</p>
+        </div>
+
+        <div class="chars-block">
+            <h2 class="chars-block__header">Б</h2>
+            <p>блин</p>
+            <p>бокс</p>
+            <p>бал</p>
+            <p>баня</p>
+            <p>билет</p>
+            <p>блик</p>
+        </div>
+
+        <div class="chars-block">
+            <h2 class="chars-block__header">В</h2>
+            <p>вода</p>
+            <p>ветка</p>
+            <p>весна</p>
+            <p>веник</p>
+            <p>внук</p>
+            <p>ворона</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Задание 5. Часть 2</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .heading-1 .heading-2 {
+            font-family: Playfair Display, serif;
+            font-weight: 700;
+        }
+        
+        .heading-1 {
+            line-height: 150%;
+            font-size: 26px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            border: 1px solid gray;
+            padding: 1rem;
+        }
+        
+        .heading-2 {
+            line-height: 150%;
+            font-size: 20px;
+            padding: 0.5rem;
+            color: rgb(123, 137, 241);
+            background-color: rgb(242, 119, 119);
+            display: inline-block;
+        }
+
+        .text-1, .text-2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .text-1::first-letter {
+            font-size: 24px;
+        }
+
+        .quote::before {
+            content: '💬 "';
+        }
+        .quote::after {
+            content: '" 💬';
+        }
+
+        .words {
+            width: 100%;
+            font-size: 1em;
+            padding: 1em;
+            border: 1px solid gray;
+            overflow-wrap: break-word;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="heading-1">Заголовок 1</h1>
+
+        <p class="text-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum deleniti nulla quasi accusamus ipsam, corrupti perferendis nesciunt et beatae qui, hic dolorum animi nam maiores adipisci odio tempora, distinctio at!</p>
+
+        <h2 class="heading-2">Заголовок 2</h2>
+
+        <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde tenetur amet ex veritatis reiciendis, enim doloremque accusantium eligendi consequatur, autem dolorem voluptate dolorum molestiae libero, minima ad consectetur blanditiis.</p>
+
+        <blockquote class="quote" cite="https://www.huxley.net/bnw/four.html">
+            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+        </blockquote>
+        <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+
+
+        <div class="words">
+            <p>loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem</p>
+        </div>
+    </div>
+</body>
+
+</html>

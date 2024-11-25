@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 19</title>
+    <style>
+        h1,
+        h2,
+        h3,
+        p,
+        ol,
+        ul,
+        body {
+            margin: 0;
+        }
+
+        :root {
+            --primary-color: #FFC107;
+        }
+
+        img {
+            max-inline-size: 100%;
+            block-size: auto;
+        }
+
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+        }
+
+        .container{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+        .heading{
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            background-color: azure;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .example-button{
+
+        }
+        .button{
+            display: inline-flex;
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #FFC107;
+            border: 1px solid black;
+            color: black;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: color 150ms ease-in, background-color 150ms ease-in;
+        }
+        .button:hover{
+            background-color: #FF5722;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2 class="heading">Пример с кнопкой</h2>
+    <div class="container">
+        <div class="example-button">
+            <button class="button" type="button">Кнопка или ссылка</button>
+        </div>
+    </div>
+
+    <h2 class="heading">Задача 1. Карточка</h2>
+
+    <style>
+        .items{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        /* Задание 1 */
+        .item:hover {
+            cursor: pointer;
+            border: 1px solid var(--primary-color);
+            .item__bg, .item__footer {
+                background-color: var(--primary-color);
+            }
+        }
+        .item {
+            transition-property: background-color, border;
+            transition-duration: 200ms;
+            transition-timing-function: linear;
+        }
+        /* Конец Задания 1 */
+        
+        .item{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .item__name{
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .item__content{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .item__footer{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            transition: background-color 150ms ease-in;
+        }
+        .item__bg{
+            background-color: black;
+            height: 150px;
+            transition: background-color 150ms ease-in;
+        }
+        .item__body{
+            padding: 10px;
+        }
+        .item__date{
+            background-color: #FFEB3B;
+            padding: 3px;
+            display: inline-block;
+            font-size: 13px;
+            color: black;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="items">
+            <div class="item">
+                <div class="item__bg"></div>
+                <div class="item__body">
+                    <h2 class="item__name">Title 2</h2>
+                    <time class="item__date">2023-12-12</time>
+                    <p class="item__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item__footer">Read More</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="heading">Задача 2. Иконка</h2>
+
+    <style>
+        /* Задание 2 */
+        
+        .arrow{
+            display: inline-flex;
+            transition-duration: 1s;
+            transition-property: color, rotate;
+            transition-timing-function: linear;
+        }
+        .arrow:hover{
+            rotate: 180deg;
+            color: var(--primary-color);
+        }
+        
+        /* Конец Задания 2 */
+    </style>
+    <div class="container">
+        <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+    </div>
+
+
+    <h2 class="heading">Задача 3. Облако</h2>
+
+    <style>
+        /* Задание 3 */
+        .cloud {
+            animation: cloud_animation 10s alternate infinite;
+        }
+        
+        @keyframes cloud_animation {
+            from {
+                transform: translate(30%);
+            }
+            to {
+                transform: translate(-30%);
+            }
+        }
+
+        /* Конец Задания 3 */
+    </style>
+
+    <div class="container">
+        <div class="cloud">
+            <img src="https://www.freeiconspng.com/uploads/rain-clouds-png-27.png" alt="">
+        </div>
+    </div>
+
+
+    <h2 class="heading">Задача 4. Stacked</h2>
+
+    <style>
+
+        .stacked-cards{
+            position: relative;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            height: 400px;
+            width: 400px;
+            background: white;
+        }
+
+        .stacked-card{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 1;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Задание 4 */
+        
+        .stacked-card__card--1{
+            z-index: 2;
+            transform: rotate(3deg);
+            background-color: red;
+        }
+        
+        .stacked-card__card--2{       
+            transform: rotate(6deg);
+            background-color: blue;
+        }
+        
+        .stacked-card__card--3{
+            transform: rotate(12deg);
+            background-color: yellow;
+        }
+
+        /* Конец Задания 4 */
+        </style>
+
+
+    <div class="container">
+        <div class="stacked-cards">
+            <div class="stacked-card stacked-card__card--1"></div>
+            <div class="stacked-card stacked-card__card--2"></div>
+            <div class="stacked-card stacked-card__card--3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Задание 6.</title>
+   <style>
+      .header__wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         gap: 10%;
+      }
+
+      .navigation {
+         flex-grow: 1;
+      }
+
+      .navigation__list {
+         display: flex;
+         /* justify-content: space-around; */
+         justify-content: flex-end;
+         gap: 20px;
+      }
+
+      .navigation__list li a {
+         color: #333;
+         font-weight: bold;
+      }
+
+      .content__wrapper {
+         display: flex;
+         flex-flow: row nowrap;
+      }
+
+      .card {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 100%;
+         margin: auto;
+      }
+
+      .card__btn {
+         display: flex;
+         gap: 1rem;
+         align-self: flex-start;
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <div class="container header__wrapper">
+         <img class="logo" src="img/logo.png" alt="">
+         <nav class="navigation">
+            <ul class="navigation__list">
+               <li><a href="#">Главная</a></li>
+               <li><a href="#">Блог</a></li>
+               <li><a href="#">Подкасты</a></li>
+               <li><a href="#">Контакты</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <div class="container">
+      <div class="page-header">
+         <h1 class="page-header__title">Технологии будущего: как инновации меняют нашу жизнь</h1>
+         <p class="page-header__description">Подкаст "Завтра уже сегодня" исследует передовые технологии и их влияние на
+            нашу повседневную жизнь.</p>
+         <p> Мы приглашаем экспертов, изобретателей и визионеров, чтобы обсудить последние инновации, их потенциальное
+            воздействие на общество и этические вопросы, связанные с технологическим прогрессом. Присоединяйтесь к нам в
+            увлекательном путешествии в мир будущего, которое уже наступает!</p>
+      </div>
+      <div class="content__wrapper">
+         <section class="subscribe">
+            <div class="card">
+               <div class="card__body">
+                  <img src="img/img.jpg" alt="" class="card__image">
+                  <h2 class="card__title">Завтра уже сегодня</h2>
+                  <p class="card__host">ведущий Ольга Иванова</p>
+                  <p class="card__description">Технологии будущего: как инновации меняют нашу жизнь</p>
+               </div>
+               <button class="card__btn btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-rss">
+                     <path d="M4 11a9 9 0 0 1 9 9"></path>
+                     <path d="M4 4a16 16 0 0 1 16 16"></path>
+                     <circle cx="5" cy="19" r="1"></circle>
+                  </svg>
+                  Подписаться
+               </button>
+            </div>
+         </section>
+         <section class="recent-episodes">
+            <h2 class="recent-episodes__title">Последние эпизоды:</h2>
+            <article class="episode-card">
+               <h3 class="episode-card__title">Эпизод №01: Искусственный интеллект: друг или враг?</h3>
+               <p class="episode-card__meta">
+                  Анна Смирнова <span class="meta-text">-</span>
+                  05.08.2024</span>
+               </p>
+               <button class="episode-card__btn btn">Прослушать</button>
+            </article>
+            <article class="episode-card">
+               <h3 class="episode-card__title">Эпизод №02: Квантовые компьютеры: новая эра вычислений</h3>
+               <p class="episode-card__meta"> Михаил Волков <span class="meta-text">-</span>
+                  19.08.2024</span>
+               </p>
+               <button class="episode-card__btn btn">Прослушать</button>
+            </article>
+            <article class="episode-card">
+               <h3 class="episode-card__title">Эпизод №03: Биотехнологии: редактирование генома человека</h3>
+               <p class="episode-card__meta"> Елена Кузнецова <span class="meta-text">-</span>
+                  02.09.2024</span>
+               </p>
+               <button class="episode-card__btn btn">Прослушать</button>
+            </article>
+            <article class="episode-card">
+               <h3 class="episode-card__title">Эпизод №04: Виртуальная реальность: мир без границ</h3>
+               <p class="episode-card__meta"> Елена Кузнецова <span class="meta-text">-</span>
+                  16.09.2024</span>
+               </p>
+               <button class="episode-card__btn btn">Прослушать</button>
+            </article>
+         </section>
+      </div>
+   </div>
+</body>
+
+</html>

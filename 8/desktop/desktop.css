@@ -1,0 +1,263 @@
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+body {
+    margin: 0;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.color {
+    background-color: red;
+}
+
+.page__cell {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1292px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/*ширина экрана < 1292px*/
+@media (max-width: 1291px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/*ширина экрана < 1024px*/
+@media (max-width: 1023px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/*ширина экрана < 768px*/
+@media (max-width: 767px) {
+    .container {
+        max-width: 576px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/*ширина экрана < 576px*/
+@media (max-width: 575px) {
+    .container {
+        max-width: 289px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+.example-text {
+    background-color: yellow;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 16px;
+}
+
+/*ширина экрана <= 1292px*/
+@media (max-width: 1291px) {
+    .example-text {
+        font-size: 24px;
+    }
+}
+
+/*ширина экрана <= 1024px*/
+@media (max-width: 1023px) {
+    .example-text {
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+/* PR */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 50px;
+}
+
+@media (max-width: 1291px) {
+    .gallery {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1023px) {
+    .gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.gallery__item {
+    width: 100%;
+}
+
+.gallery__item--span3 {
+    grid-column: span 3 / span 3;
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .gallery__item--span3 {
+        grid-column: span 2 / span 2;
+    }
+}
+
+@media (max-width: 575px) {
+    .gallery__item--span3 {
+        grid-column: 1 / 1;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid black;
+}
+
+.card__title {
+    margin-bottom: 1rem;
+    font-size: 32px;
+}
+
+.card__body {
+    padding: 10px;
+}
+
+.card__descr {
+    font-size: 18px;
+}
+
+.card__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.card--row.card {
+    flex-direction: row;
+}
+
+@media (max-width: 575px) {
+    .card--row.card {
+        flex-direction: column;
+    }
+}
+
+
+
+.service {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+}
+
+@media (max-width: 1023px) {
+    .service {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .service {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
+.service__title {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.service__text {
+    font-size: 18px;
+}
+
+.service__media {
+    padding: 0 50px;
+    position: relative;
+}
+
+@media (max-width: 1023px) {
+    .service__media {
+        align-self: center;
+    }
+}
+
+.service__img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service__icon {
+    position: absolute;
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 12px;
+    top: -15px;
+    left: 25px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .service__media {
+        padding: 0;
+    }
+
+    .service__icon {
+        left: -2em;
+    }
+}

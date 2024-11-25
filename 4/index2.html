@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7</title>
+    <style>
+        html {
+    box-sizing: border-box;
+    
+            }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    
+            }
+
+        body, p {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container{
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .rows{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .rows__cell{
+            width: calc((100% - 40px) / 3);
+        }
+
+        .item{
+            padding: 20px;
+            border: 1px solid red;
+            background-color: aquamarine;
+        }
+
+        .item__thumb{
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .item__description{
+            margin-bottom: 20px;
+        }
+        .item__mark{
+            padding: 25px;
+            border-radius: 1rem;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rows">
+
+            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>
+
+            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>
+
+            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>
+            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>            <div class="item rows__cell">
+                <img class="item__thumb" src="https://loremflickr.com/200/500" alt="">
+                <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
+                <div class="item__mark"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
