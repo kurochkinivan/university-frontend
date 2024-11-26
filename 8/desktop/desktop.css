@@ -66,11 +66,7 @@ body {
 
 /*ширина экрана < 576px*/
 @media (max-width: 575px) {
-    .container {
-        max-width: 289px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+
 }
 
 

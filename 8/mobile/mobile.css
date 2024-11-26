@@ -100,7 +100,7 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     width: 100%;
     gap: 1.5em;
-    padding: 0 50px;
+    padding: 0 25px;
 }
 
 .gallery__item--span3 {
@@ -141,12 +141,13 @@ body {
 
 @media (min-width: 1440px) {
     .gallery {
+        padding: 0 50px;
         grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 }
 
 .gallery__item {
-    container: gallerty-item-container / inline-size;
+    container: gallery-item-container / inline-size;
 }
 
 .card {
@@ -175,17 +176,12 @@ body {
     object-fit: cover;
 }
 
-@container gallerty-item-container (min-width: 768px) {
+@container gallery-item-container (min-width: 700px) { 
     .gallery__item--span3 .card {
-        display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
         height: 100%;
     }
-    .gallery__item--span3 .card__media {
-    }
 }
-
 
 
 .service {
