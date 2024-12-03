@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перезаявляемые и неперезаявляемые переменные</title>
+</head>
+<body>
+    <h1>Перезаявляемые и неперезаявляемые переменные</h1>
+
+    <script>
+        var firstName = 'Ivan';
+        console.log("переменная, которую можно перезаявить", firstName);
+        firstName = 42
+        console.log("измененная перменная", firstName);
+        var firstName = 'John';
+        console.log("перезаявленная перменная", firstName);
+        let age = 18;
+        console.log("переменная, которую нельзя перезаявить", age);
+        age = 'Natalya';
+        console.log("измененная перменная", age);
+        // let age = 25
+    </script>
+</body>
+</html>
