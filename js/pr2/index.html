@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.</title>
+</head>
+<body>
+    <script>
+        const undefVal = undefined;
+        console.log("undefVal -> Number:", Number(undefVal), "Boolean:", Boolean(undefVal), "String:", String(undefVal));
+        console.log('------------------');
+    
+        const nullVal = null;
+        console.log("nullVal -> Number:", Number(nullVal), "Boolean:", Boolean(nullVal), "String:", String(nullVal));
+        console.log('------------------');
+    
+        const numberVal = 42;
+        console.log("numberVal -> Number:", Number(numberVal), "Boolean:", Boolean(numberVal), "String:", String(numberVal));
+        console.log('------------------');
+    
+        const stringVal = 'My name is Ivan';
+        console.log("stringVal -> Number:", Number(stringVal), "Boolean:", Boolean(stringVal), "String:", String(stringVal));
+        console.log('------------------');
+    
+        const booleanVal = true;
+        console.log("booleanVal -> Number:", Number(booleanVal), "Boolean:", Boolean(booleanVal), "String:", String(booleanVal));
+        console.log('------------------');
+    
+        const bigIntVal = 9007199254740991n;
+        console.log("bigIntVal -> Number:", Number(bigIntVal), "Boolean:", Boolean(bigIntVal), "String:", String(bigIntVal));
+        console.log('------------------');
+    
+        const symbolValue = Symbol('description');
+        console.log("symbolValue -> Number: Cannot convert, Boolean:", Boolean(symbolValue), "String:", String(symbolValue));
+        console.log('------------------');
+    
+        // Объекты:
+        const person = { name: 'Ivan', age: 20 };
+        console.log("person -> Number:", Number(person), "Boolean:", Boolean(person), "String:", String(person));
+        console.log('------------------');
+    
+        const arr = [1, 3, 5, 10];
+        console.log("arr -> Number:", Number(arr), "Boolean:", Boolean(arr), "String:", String(arr));
+        console.log('------------------');
+    
+        const fn = function () { console.log('Hello') };
+        console.log("fn -> Number:", Number(fn), "Boolean:", Boolean(fn), "String:", String(fn));
+        console.log('------------------');
+    
+        const date = new Date();
+        console.log("date -> Number:", Number(date), "Boolean:", Boolean(date), "String:", String(date));
+        console.log('------------------');
+    </script>
+    
+    <script src="convert.js"></script>
+    <script>console.log('--------')</script>
+    <script src="object.js"></script>
+</body>
+</html>
