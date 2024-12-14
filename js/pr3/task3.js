@@ -9,15 +9,9 @@
         return op(x, y);
     }
 
-    globalThis.add = add; 
-    globalThis.subtract = subtract;
-    globalThis.multiply = multiply;
-    globalThis.divide = divide;
-    globalThis.calculate = calculate;
+    console.log("-----------")
+    console.log(calculate(1, 2, add))
 }
 
 
 
-console.log("-----------")
-
-console.log(calculate(1, 2, add))

@@ -4,7 +4,7 @@ const object1 = {
     toString() {
         return `У студента ${this.name} в кошельке: ${this.money} рублей`;
     },
-        valueOf() {
+    valueOf() {
         return ''
     }
 }
@@ -34,5 +34,9 @@ const divider = () => {
     return ' | ';
 }
 
-const result = (`${object1}` + object1) + divider() + (`${object2}` + object2) + divider() + (`${object3}` + object3)
+divider.toString = () => {
+    return ' | ';
+}
+
+const result = (`${object1}` + object1) + divider + (`${object2}` + object2) + divider + (`${object3}` + object3)
 console.log(result)

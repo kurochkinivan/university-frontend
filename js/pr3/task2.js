@@ -5,7 +5,7 @@
     }
 }
 
-function ArrayInfo(...args) {
+function arrayInfo(...args) {
     console.log('length', args.length)
     console.log('min', Math.min(...args))
     console.log('max', Math.max(...args))
@@ -13,4 +13,4 @@ function ArrayInfo(...args) {
 
 console.log("-----------")
 
-ArrayInfo(...[1, 2, 3, 4, 5])
+arrayInfo(1, 2, 3, 4, 5)
