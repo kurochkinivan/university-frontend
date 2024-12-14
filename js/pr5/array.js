@@ -221,9 +221,43 @@ function sortByTitle(books, isAscending) {
     return books.sort((a, b) => b.title.localeCompare(a.title, 'ru'));
 }
 
+const searchTitle = (books, title) => {
+    const lowerCaseTitle = String(title).toLowerCase()
+    return books.filter(book => String(book.title).toLowerCase().includes(lowerCaseTitle))
+}
+
+const fuzzySearch = (books, query) => {
+    const lowerCaseQuery = String(query).toLowerCase()
+    const matches = books.filter(book =>
+        Object.values(book).some(value =>
+            String(value).toLowerCase().includes(lowerCaseQuery)
+        )
+    )
+    
+    let res = ''
+    let total = 0
+    matches.forEach(match => {
+        res += `${match.title} - ${match.author}, ${new Date(match.releaseDate).toLocaleDateString('ru-RU')}\n`
+        total += match.price
+    });
+
+    let totalPrice = Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(total);
+
+    res += `\nЦена за перечисленные книги: ${totalPrice}`
+
+    return res
+}
+
 // console.log(filterByGenre(books, "Классическая литература"));
 // console.log(sortByRating(books, true));
-// console.log(sortByDate(books, true))
-console.log(sortByTitle(books, true))
+// console.log(sortByDate(books, true));
+// console.log(sortByPrice(books, true));
+// console.log(sortByTitle(books, false));
+
+console.log(fuzzySearch(books, 'толстой'))
+
+
+
+
 
 
