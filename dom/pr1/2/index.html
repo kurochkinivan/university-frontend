@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1. ч2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+    <div class="container">
+        <div class="flex-container page__space">
+            <button class="button button--primary js-button-click" type="button"> Нажми меня </button>
+            <button class="button button--primary js-button-add" type="button"> Добавить событие </button>
+            <button class="button button--primary js-button-remove" type="button"> Удалить событие </button>
+        </div>
+
+        <form action="" class="form page__space">
+            <div class="form__cell">
+                <label for="name" class="label form__label">ФИО</label>
+                <input id="name" name="fio" class="input js-input" type="text" placeholder="ФИО">
+                <p class="js-input-text"></p>
+            </div>
+
+            <div class="form__cell">
+                <label for="email" class="label form__label">Email</label>
+                <input id="email" name="email" class="input js-change" type="email" placeholder="Email">
+                <p class="js-change-text"></p>
+            </div>
+
+            <div class="form__cell">
+                <label for="tel" class="label form__label">Телефон</label>
+                <input id="tel" name="tel1" class="input js-blur" type="tel" placeholder="Телефон">
+                <p class="js-blur-text"></p>
+            </div>
+
+            <div class="form__cell">
+                <label for="tel2" class="label form__label">Телефон 2</label>
+                <input id="tel2" name="tel2" class="input js-focus" type="tel2" placeholder="Телефон 2">
+                <p class="js-focus-text"></p>
+            </div>
+
+            <div class="form__cell">
+                <label for="cars" class="label form__label">Машина</label>
+                <select id="cars" name="car" class="input input--select js-select">
+                    <option value="1">Машина 1</option>
+                    <option value="2">Машина 2</option>
+                </select>
+            </div>
+
+
+            <fieldset class="form__cell">
+                <legend class="label form__label">Выберите цвета</legend>
+                <div class="check-field">
+                    <input class="check-field__input js-checkbox-1" type="checkbox" name="colors" value="red"
+                        id="colors1">
+                    <label class="check-field__label" for="colors1">
+                        Красный
+                    </label>
+                </div>
+                <div class="check-field">
+                    <input class="check-field__input js-checkbox-2" type="checkbox" name="colors" value="blue"
+                        id="colors2">
+                    <label class="check-field__label" for="colors2">
+                        Синий
+                    </label>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="form__cell">
+                <legend class="label form__label">Выберите цвет</legend>
+
+                <div class="check-field">
+                    <input class="check-field__input js-radio-1" value="1" type="radio" name="color" id="color1">
+                    <label class="check-field__label" for="color1">
+                        Красный
+                    </label>
+                </div>
+
+                <div class="check-field">
+                    <input class="check-field__input js-radio-2" value="2" type="radio" name="color" id="color2">
+                    <label class="check-field__label" for="color2">
+                        Синий
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="page__space">
+            <p class="text">Текст</p>
+            <ul class="task">
+                <li class="task__item complete">Лист 1</li>
+                <li class="task__item">Лист 2</li>
+                <li class="task__item">Лист 3</li>
+                <li class="task__item">Лист 4</li>
+                <li class="task__item">Лист 5</li>
+                <li class="task__item">Лист 6</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="page__space">
+            <ul class="task task--2">
+                <li class="task__item">Лист 1</li>
+                <li class="task__item">Лист 2</li>
+                <li class="task__item">Лист 3</li>
+                <li class="task__item">Лист 4</li>
+                <li class="task__item">Лист 5</li>
+                <li class="task__item">Лист 6</li>
+            </ul>
+        </div>
+
+
+        <table class="page__space table">
+            <tbody>
+                <tr>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-center">
+                            <line x1="18" y1="10" x2="6" y2="10"></line>
+                            <line x1="21" y1="6" x2="3" y2="6"></line>
+                            <line x1="21" y1="14" x2="3" y2="14"></line>
+                            <line x1="18" y1="18" x2="6" y2="18"></line>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon">
+                            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2">
+                            </polygon>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg></td>
+                </tr>
+                <tr>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay">
+                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-anchor">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <line x1="12" y1="22" x2="12" y2="8"></line>
+                            <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive">
+                            <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                            <rect x="1" y="3" width="22" height="5"></rect>
+                            <line x1="10" y1="12" x2="14" y2="12"></line>
+                        </svg></td>
+                </tr>
+                <tr>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="8 12 12 16 16 12"></polyline>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-left">
+                            <line x1="17" y1="7" x2="7" y2="17"></line>
+                            <polyline points="17 17 7 17 7 7"></polyline>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right">
+                            <line x1="7" y1="7" x2="17" y2="17"></line>
+                            <polyline points="17 7 17 17 7 17"></polyline>
+                        </svg></td>
+                    <td class="table__td"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page__space">
+            <div class="search">
+                <input class="input search__input" type="text" placeholder="Поиск">
+                <button class="button button--info search__btn" type="button">Найти</button>
+                <button class="button button--danger search__clear" type="button">Очистить</button>
+            </div>
+            <ul class="list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Task 1.
+        {
+            const clickBtn = document.querySelector('.js-button-click')
+            const addBtn = document.querySelector('.js-button-add')
+            const removeBtn = document.querySelector('.js-button-remove')
+            const alertFunc = () => {
+                alert('CLICK!');
+            }
+            const addClickHandler = () => {
+                clickBtn.addEventListener('click', alertFunc);
+                addBtn.removeEventListener('click', addClickHandler);
+            };
+            addBtn.addEventListener('click', addClickHandler);
+            removeBtn.addEventListener('click', () => {
+                clickBtn.removeEventListener('click', alertFunc)
+            })
+        }
+
+        // Task 2.
+        {
+            // Part 1
+            const text1 = document.querySelector('.js-input-text');
+            document.querySelector('.js-input').addEventListener('input', (e) => {
+                const value = e.currentTarget.value;
+                text1.textContent = value;
+            });
+
+            const text2 = document.querySelector('.js-change-text');
+            document.querySelector('.js-change').addEventListener('change', (e) => {
+                const value = e.currentTarget.value;
+                text2.textContent = value;
+            });
+
+            const text3 = document.querySelector('.js-blur-text');
+            document.querySelector('.js-blur').addEventListener('blur', (e) => {
+                const value = e.currentTarget.value;
+                text3.textContent = value;
+            });
+
+            const text4 = document.querySelector('.js-focus-text');
+            document.querySelector('.js-focus').addEventListener('focus', (e) => {
+                const value = e.currentTarget.value;
+                text4.textContent = value;
+            });
+
+            // Part 2
+            document.querySelector('.js-checkbox-1').addEventListener('change', (e) => {
+                console.log('.js-checkbox-1 was clicked:', e.currentTarget.checked, e.currentTarget.value);
+            })
+            document.querySelector('.js-checkbox-2').addEventListener('change', (e) => {
+                console.log('.js-checkbox-2 was clicked:', e.currentTarget.checked, e.currentTarget.value);
+            })
+            document.querySelector('.js-radio-1').addEventListener('change', (e) => {
+                console.log('.js-radio-1 was clicked:', e.currentTarget.checked, e.currentTarget.value);
+            })
+            document.querySelector('.js-radio-2').addEventListener('change', (e) => {
+                console.log('.js-radio-2 was clicked:', e.currentTarget.checked, e.currentTarget.value);
+            })
+            document.querySelector('.js-select').addEventListener('change', (e) => {
+                console.log('.js-select was clicked:', e.currentTarget.value, e.currentTarget.options);
+            })
+
+            // Part 3
+            form = document.querySelector('.form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+                const formEntries = Object.fromEntries(formData.entries());
+
+                console.log(formEntries);
+            });
+        }
+
+        // Task 3.
+        {
+            let textSize = 16;
+            let i = 0;
+
+            document.querySelectorAll('.task__item:not(.task--2 .task__item)').forEach(li => {
+                li.addEventListener('click', () => {
+                    li.classList.toggle('complete');
+                    textSize++
+                    document.querySelector('.text').style.fontSize = `${textSize}px`
+                })
+            })
+
+            document.querySelector('.task--2').addEventListener('click', (event) => {
+                if (event.target.tagName === 'LI') {
+                    event.target.classList.toggle('complete');
+                    textSize++
+                    document.querySelector('.text').style.fontSize = `${textSize}px`
+                }
+            })
+        }
+
+        // Task 4.
+        {
+            let textSize = 16;
+            let activeItem = null
+
+            document.querySelector('.table').addEventListener('click', (event) => {
+                let td = event.target.closest('td')
+                if (td != null) {
+                    activeItem?.classList.remove('table__td--active');
+                    activeItem = td
+                    activeItem.classList.add('table__td--active')
+                }
+            })
+        }
+
+        // Task 5.
+        {
+            let activeItem = null;
+        }
+
+        // Task 6.
+        {
+            const words = ['День', 'Том', 'Гость', 'Выборы', 'Солнце', 'Ход', 'Речь', 'Смена', 'Бизнес', 'Качество', 'Республика', 'Сердце', 'Администрация', 'Поезд', 'Работник', 'Ресурс', 'Часть', 'Изучение', 'Бок', 'Понимание', 'Животное', 'Утро', 'Правда', 'Личность', 'Звонок', 'Урок', 'Командир', 'Американец', 'Заседание', 'Образ'];
+
+            const list = document.querySelector('.list');
+            const input = document.querySelector('.search__input');
+            const search_btn = document.querySelector('.search__btn')
+            const search__clear = document.querySelector('.search__clear')
+
+            const fuzzySearch = (words, query) => {
+                const lowerCaseQuery = query.toLowerCase(); 
+                return words.filter(word => word.toLowerCase().includes(lowerCaseQuery)); 
+            };
+
+            const printWords = (words) => {
+                list.innerHTML = ''; 
+                words.forEach((word) => {
+                    const li = document.createElement('li'); 
+                    li.textContent = word; 
+                    li.onclick = () => {
+                        li.classList.toggle('list__element--active');
+                    }
+                    li.style.cursor = 'pointer';
+                    list.appendChild(li); 
+                });
+            };
+
+            printWords(words);
+
+            search_btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                
+                const query = input.value.trim();
+                const filteredWords = query === '' ? words : fuzzySearch(words, query);
+                printWords(filteredWords);
+            })
+
+            search__clear.addEventListener('click', (event) => {
+                event.preventDefault();
+                input.value = '';
+                printWords(words);
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1. ч1</title>
+    <link rel="stylesheet" href="style.css">
+
+    <template id="item_template">
+        <div class="item">
+            <div class="item__bg"></div>
+            <div class="item__body">
+                <h2 class="item__name"></h2>
+                <p class="item__content"></p>
+                <div class="item__footer">Read More</div>
+            </div>
+        </div>
+    </template>
+
+</head>
+
+<body class="page">
+
+    <div class="container">
+        <h1>Заголовок</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius alias
+            vitae dicta tempora, minus rerum laudantium magni reprehenderit <span>eum perferendis</span>! Molestias
+            cupiditate ratione fugiat sapiente.</p>
+
+        <article class="article">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius
+                    alias vitae dicta tempora, <span>minus rerum laudantium magni</span> reprehenderit eum perferendis!
+                    Molestias cupiditate ratione fugiat sapiente.</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius
+                alias vitae dicta tempora, minus rerum laudantium magni reprehenderit <span>eum perferendis</span>!
+                Molestias cupiditate ratione fugiat sapiente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius
+                alias vitae dicta tempora, minus rerum laudantium magni reprehenderit eum perferendis! Molestias
+                cupiditate ratione fugiat sapiente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius
+                alias vitae dicta tempora, <span>minus rerum laudantium magni reprehenderit</span> eum perferendis!
+                Molestias cupiditate ratione fugiat sapiente.</p>
+        </article>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit commodi, adipisci ex tenetur eius alias
+            vitae dicta tempora, minus rerum laudantium magni reprehenderit eum perferendis! Molestias cupiditate
+            ratione fugiat sapiente.</p>
+
+        <form action="" class="form page__space">
+            <div class="form__cell">
+                <label for="name" class="label form__label">ФИО</label>
+                <input id="name" required class="input" type="text" placeholder="ФИО">
+            </div>
+
+            <div class="form__footer">
+                <button class="button button--primary" type="submit">Отправить</button>
+            </div>
+        </form>
+
+        <div class="page__space flex-container">
+            <button class="button button--info js-button-1" type="button">Добавить через createElement</button>
+            <button class="button button--info js-button-2" type="button">Добавить через createElement -
+                template</button>
+            <button class="button button--danger js-button-3" type="button">Добавить через insertAdjacentHTML</button>
+            <button class="button button--info js-button-4" type="button">Добавить через createElement - template -
+                ARRAY</button>
+            <button class="button button--danger js-button-5" type="button">Добавить через insertAdjacentHTML -
+                ARRAY</button>
+        </div>
+
+        <div class="items page__space">
+            <!-- <div class="item">
+                <div class="item__bg"></div>
+                <div class="item__body">
+                    <h2 class="item__name">Title 1</h2>
+                    <p class="item__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.</p>
+                    <div class="item__footer">Read More</div>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+
+    <!-- Задание 1 -->
+    <script>
+        const article = document.querySelector('.article')
+        const articleP = article.querySelectorAll('p')
+        article.firstElementChild.classList.add('highlight')
+        articleP.forEach(p => {
+            const span = p.querySelector('span')
+            if (span != null) {
+                span.classList.add('text-secondary')
+            }
+        });
+    </script>
+
+    <!-- Задание 2 -->
+    <!-- <div class="form__cell">
+             <label for="email" class="label form__label">Email</label>
+             <input id="email" value="text@gm.com"  class="input" type="text" placeholder="Email">
+     </div> -->
+    <script>
+        const form = document.querySelector('form')
+        const input = document.createElement('input')
+        input.id = 'email'
+        input.value = 'text@gm.com'
+        input.className = 'input'
+        input.type = 'text'
+        input.placeholder = 'Email'
+
+        const label = document.createElement('label')
+        label.className = 'label form__label'
+        label.textContent = 'Email'
+        label.htmlFor = input.id // label.setAttribute('for', input.id) 
+
+        const form__cell = document.createElement('div')
+        form__cell.className = 'form__cell'
+        form__cell.appendChild(label)
+        form__cell.appendChild(input)
+
+        form.querySelector('div').after(form__cell)
+    </script>
+
+    <!-- <div class="item">
+        <div class="item__bg"></div>
+        <div class="item__body">
+            <h2 class="item__name">Title 1</h2>
+            <p class="item__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet
+                laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil
+                quibusdam ea debitis sunt eos placeat.</p>
+            <div class="item__footer">Read More</div>
+        </div>
+    </div> -->
+    <template id="template__item">
+        <div class="item">
+            <div class="item__bg"></div>
+            <div class="item__body">
+                <h2 class="item__name"></h2>
+                <p class="item__content"></p>
+                <div class="item__footer"></div>
+            </div>
+        </div>
+    </template>
+    <div id="content"></div>
+
+    <script>
+        const lists = [
+            {
+                id: 1,
+                name: 'Название новости 1',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque atque velit esse aperiam ducimus magni aspernatur deleniti harum repudiandae expedita mollitia impedit nobis ipsam nam, temporibus, adipisci vitae culpa.'
+            },
+            {
+                id: 2,
+                name: 'Название новости 2',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias cum nemo dolorum iure excepturi quisquam cupiditate assumenda, animi non consequuntur illum facilis itaque temporibus velit omnis minus expedita neque!'
+            },
+            {
+                id: 3,
+                name: 'Название новости 3',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fugit iure enim incidunt excepturi id culpa ipsum obcaecati. Ea dolores consequatur ducimus error beatae quos omnis laudantium labore voluptatem laborum.'
+            },
+            {
+                id: 4,
+                name: 'Название новости 4',
+                description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eveniet laudantium ut rerum, aliquid accusantium quis fugit sint commodi dolorum eos! Dolores possimus nihil quibusdam ea debitis sunt eos placeat.'
+            },
+            {
+                id: 5,
+                name: 'Название новости 5',
+                description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id explicabo quis asperiores fugiat quae sint doloremque qui atque vero illum iure nostrum nihil reprehenderit, blanditiis facilis magnam magni. Dicta, quidem.'
+            }
+        ];
+
+        const itemWrapper = document.querySelector('.items');
+        let idx = 0
+
+        document.querySelector('.js-button-1').addEventListener('click', () => {
+            const item = document.createElement('div')
+            item.className = 'item'
+
+            const item__bg = document.createElement('div')
+            item__bg.className = 'item__bg'
+
+            const item__body = document.createElement('div')
+            item__body.className = 'item__body'
+
+            const item__name = document.createElement('h2')
+            item__name.className = 'item__name'
+            item__name.textContent = "Create element"
+
+            const item__content = document.createElement('p')
+            item__content.className = 'item__content'
+            item__content.textContent = "Created using create element"
+
+            const item__footer = document.createElement('div')
+            item__footer.className = 'item__footer'
+            item__footer.textContent = 'Read More'
+
+            item__body.append(item__name)
+            item__body.append(item__content)
+            item__body.append(item__footer)
+
+            item.append(item__bg)
+            item.append(item__body)
+
+            itemWrapper.append(item)
+        });
+
+        document.querySelector('.js-button-2').addEventListener('click', () => {
+            const content = document.getElementById('content')
+            const template = document.getElementById('template__item')
+            const element = template.content.cloneNode(true).firstElementChild
+            const head = element.querySelector('.item__name');
+            const body = element.querySelector('.item__content');
+            const footer = element.querySelector('.item__footer');
+            head.textContent = 'Template element';
+            body.textContent = 'Created using template element';
+            footer.textContent = 'Read More';
+
+
+            itemWrapper.append(element)
+        });
+
+        document.querySelector('.js-button-3').addEventListener('click', () => {
+            const item_element = `
+            <div class="item">
+                <div class="item__bg"></div>
+                <div class="item__body">
+                    <h2 class="item__name">Insert HTML</h2>
+                    <p class="item__content">Created using insert HTML style</p>
+                    <div class="item__footer">Read More</div>
+                </div>
+            </div>`
+
+            itemWrapper.insertAdjacentHTML('beforeend', item_element)
+        });
+
+        document.querySelector('.js-button-4').addEventListener('click', () => {
+            const content = document.getElementById('content')
+            const template = document.getElementById('template__item')
+            const element = template.content.cloneNode(true).firstElementChild
+            const head = element.querySelector('.item__name');
+            const body = element.querySelector('.item__content');
+            const footer = element.querySelector('.item__footer');
+            head.textContent = lists[idx % lists.length].name;
+            body.textContent = lists[idx % lists.length].description;
+            footer.textContent = 'Read More';
+            idx++ 
+
+            itemWrapper.append(element)
+        });
+
+        document.querySelector('.js-button-5').addEventListener('click', () => {
+            const item_element = `
+            <div class="item">
+                <div class="item__bg"></div>
+                <div class="item__body">
+                    <h2 class="item__name">${lists[idx % lists.length].name}</h2>
+                    <p class="item__content">${lists[idx % lists.length].description}</p>
+                    <div class="item__footer">Read More</div>
+                </div>
+            </div>`
+
+            itemWrapper.insertAdjacentHTML('beforeend', item_element)
+            idx++
+        });
+    </script>
+</body>
+
+</html>
