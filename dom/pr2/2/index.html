@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.2</title>
+    <link rel="stylesheet" href="style.css">
+
+    <template id="book_template">
+        <div class="book">
+            <h2 class="book__title">Война и мир</h2>
+            <p class="book__author">Лев Толстой</p>
+            <p class="book__genre">Классическая литература</p>
+            <p class="book__price">Цена: 750</p>
+            <p class="book__rating">Рейтинг: 4.9</p>
+            <p class="book__date">1869-01-01</p>
+        </div>
+    </template>
+
+</head>
+<body class="page">
+    <div class="container">
+        <div class="flex-container">
+            <div class="group page__space">
+                <label for="genre" class="label">Жанр</label>
+                <select id="genre" name="genre" class="input input--select">
+                    <option selected disabled value="">--Выберите жанр--</option>
+                    <option>Классическая литература</option>
+                    <option>Антиутопия</option>
+                    <option>Фэнтези</option>
+                    <option>Фантастика</option>
+                    <option>Научная фантастика</option>
+                    <option>Приключения</option>
+                    <option>Классическая литература</option>
+                    <option>Современная классика</option>
+                    <option>Магический реализм</option>
+                    <option>Сказка</option>
+                </select>
+            </div>
+            <div class="group">
+                <label for="sort" class="label">Сортировка</label>
+                <select id="sort" name="sort" class="input input--select">
+                    <option selected disabled value="">--Выберите сортировку--</option>
+                    <option value="name_asc">Название - по возрастанию</option>
+                    <option value="name_desc">Название - по убыванию</option>
+                    <hr>
+                    <option value="rating_asc">Рейтинг - по возрастанию</option>
+                    <option value="rating_desc">Рейтинг - по убыванию</option>
+                    <hr>
+                    <option value="date_asc">Дата выхода - по возрастанию</option>
+                    <option value="date_desc">Дата выхода - по убыванию</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex-container page__space">
+            <div class="group">
+                <label for="search_name" class="label">Поиск по названию</label>
+                <input id="search_name" name="search_name" class="input" type="text">
+            </div>
+            <div class="group">
+                <label for="search_fuzzy" class="label">Поиск по всем полям</label>
+                <input id="search_fuzzy" name="search_fuzzy" class="input" type="text">
+            </div>
+        </div>
+
+        <div id="bookGrid" class="grid">
+        </div>
+    </div>
+
+    <script src="list.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

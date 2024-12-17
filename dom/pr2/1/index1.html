@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.1 - search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+
+    <div class="grid">
+        <input class="input js-input" type="text">
+        <select class="input input--select js-select">
+            <option selected disabled value="">Выберите машину</option>
+            <option value="1">Машина 1</option>
+            <option value="2">Машина 2</option>
+        </select>
+        <button class="js-button button button--primary">Восстановить</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+    <script>
+        const input = document.querySelector('.js-input')
+        const select = document.querySelector('.js-select')
+        const btn = document.querySelector('.js-button')
+        const urlParams = new URLSearchParams(window.location.search)
+
+        input.value = urlParams.get('text');
+        select.value = urlParams.get('car_id');
+
+        input.addEventListener('change', () => {
+            urlParams.set('text', input.value)
+            Cookies.set('text', input.value, { expires: 3 })
+            window.history.replaceState(null, '', '?' + urlParams.toString())
+        })
+
+        select.addEventListener('change', () => {
+            urlParams.set('car_id', select.value)
+            Cookies.set('car_id', select.value, { expires: 3 })
+            window.history.replaceState(null, '', '?' + urlParams.toString())
+        })
+
+        btn.addEventListener('click', () => {
+            input.value = Cookies.get('text')
+            select.value = Cookies.get('car_id')
+        })
+
+    </script>
+</body>
+
+</html>
