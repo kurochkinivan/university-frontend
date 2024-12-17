@@ -34,13 +34,15 @@
         input.addEventListener('change', () => {
             urlParams.set('text', input.value)
             Cookies.set('text', input.value, { expires: 3 })
-            window.history.replaceState(null, '', '?' + urlParams.toString())
+            window.location.search = urlParams.toString()
+            
         })
-
+        
         select.addEventListener('change', () => {
             urlParams.set('car_id', select.value)
             Cookies.set('car_id', select.value, { expires: 3 })
-            window.history.replaceState(null, '', '?' + urlParams.toString())
+            window.location.search = urlParams.toString()
+            // window.history.replaceState(null, '', '?' + urlParams.toString())
         })
 
         btn.addEventListener('click', () => {

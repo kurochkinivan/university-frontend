@@ -3,7 +3,6 @@ const template = document.getElementById('book_template');
 const booksList = BOOKS_LIST; // из файла list.js
 
 function buildNode(book) {
-
     const element = template.content.cloneNode(true).firstElementChild;
 
     const book__title = element.querySelector('.book__title');
@@ -32,50 +31,29 @@ function buildBooks(booksList) {
     bookGrid.append(fragments);
 }
 
-const filterByGenre = (books, genre) => {
-    return books.filter(book => book.genre === genre);
-}
+const filterByGenre = (books, genre) => books.filter(book => book.genre === genre);
 
 function sortByRating(books, isAscending) {
-    if (isAscending) {
-        return books.sort((a, b) => a.rating - b.rating)
-    }
-    return books.sort((a, b) => b.rating - a.rating)
+    return books.sort((a, b) => isAscending ? a.rating - b.rating : b.rating - a.rating);
 }
 
 function sortByDate(books, isAscending) {
-    if (isAscending) {
-        return books.sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate))
-    }
-    return books.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+    return books.sort((a, b) => isAscending ? new Date(a.releaseDate) - new Date(b.releaseDate) : new Date(b.releaseDate) - new Date(a.releaseDate));
 }
+
 function sortByName(books, isAscending) {
-    if (isAscending) {
-        return books.sort((a, b) => a.title.localeCompare(b.title, 'ru'))
-    }
-    return books.sort((a, b) => b.title.localeCompare(a.title, 'ru'));
+    return books.sort((a, b) => isAscending ? a.title.localeCompare(b.title, 'ru') : b.title.localeCompare(a.title, 'ru'));
 }
 
-const searchTitle = (books, title) => {
-    const lowerCaseTitle = String(title).toLowerCase()
-    return books.filter(book => String(book.title).toLowerCase().includes(lowerCaseTitle))
-}
+const searchTitle = (books, title) => books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
 
-const fuzzySearch = (books, query) => {
-    const lowerCaseQuery = String(query).toLowerCase()
-    const matches = books.filter(book =>
-        Object.values(book).some(value =>
-            String(value).toLowerCase().includes(lowerCaseQuery)
-        )
+const fuzzySearch = (books, query) => books.filter(book =>
+    Object.values(book).some(value =>
+        String(value).toLowerCase().includes(query.toLowerCase())
     )
-    return matches
-}
+);
 
-const sortBy = {
-    rating: sortByRating,
-    date: sortByDate,
-    name: sortByName,
-};
+const sortBy = { rating: sortByRating, date: sortByDate, name: sortByName };
 
 let currentGenre = '';
 let currentSearch = '';
@@ -84,13 +62,8 @@ let currentSort = { method: 'rating', isAscending: true };
 function applyFiltersAndSort() {
     let books = [...booksList];
 
-    if (currentGenre) {
-        books = filterByGenre(books, currentGenre);
-    }
-
-    if (currentSearch) {
-        books = searchTitle(books, currentSearch);
-    }
+    if (currentGenre) books = filterByGenre(books, currentGenre);
+    if (currentSearch) books = searchTitle(books, currentSearch);
 
     books = sortBy[currentSort.method](books, currentSort.isAscending);
 
@@ -106,40 +79,31 @@ genreSelector.addEventListener('change', () => {
 const sortSelector = document.getElementById('sort');
 sortSelector.addEventListener('change', () => {
     const sortName = sortSelector.value;
-    if (sortName.endsWith('_asc')) {
-        currentSort.isAscending = true
-        currentSort.method = sortName.slice(0, -4);
-    } else if (sortName.endsWith('_desc')) {
-        currentSort.isAscending = false
-        currentSort.method = sortName.slice(0, -5);
-    }
+    currentSort.isAscending = sortName.endsWith('_asc');
+    currentSort.method = sortName.replace(/_(asc|desc)$/, '');
 
     applyFiltersAndSort();
 });
 
 const searchInput = document.getElementById('search_name');
 searchInput.addEventListener('input', () => {
-    const title = searchInput.value;
-    const books = searchTitle(booksList, title);
+    currentSearch = searchInput.value.trim();
 
-    const urlParams = new URLSearchParams(window.location.search)
-    urlParams.set('search_name', title)
-    window.history.replaceState(null, '', '?' + urlParams.toString())
-
-    buildBooks(books);
+    updateUrl();
+    applyFiltersAndSort();
 });
 
 const fuzzySearchInput = document.getElementById('search_fuzzy');
 fuzzySearchInput.addEventListener('input', () => {
     const query = fuzzySearchInput.value;
-    const books = fuzzySearch(booksList, query);
-    buildBooks(books);
+    buildBooks(fuzzySearch(booksList, query));
 });
 
 function updateUrl() {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(window.location.search);
 
     if (currentSearch) params.set('search_name', currentSearch);
+    else params.delete('search_name');
 
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.pushState({ search: currentSearch }, '', newUrl);
@@ -147,9 +111,9 @@ function updateUrl() {
 
 function restoreStateFromUrl() {
     const params = new URLSearchParams(window.location.search);
-    currentSearch = params.get('search_name') || ''; 
-    searchInput.value = currentSearch;
+    currentSearch = params.get('search_name') || '';
 
+    searchInput.value = currentSearch;
     applyFiltersAndSort();
 }
 
@@ -162,4 +126,4 @@ window.addEventListener('popstate', (event) => {
     }
 });
 
-restoreStateFromUrl()
+restoreStateFromUrl();
