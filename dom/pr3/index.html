@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Задание 3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+
+            <ul class="js-list"></ul>
+
+            <div class="messages">
+
+                <div class="loader loader--hide">
+                    <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#932b2b">
+                        <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(1 1)" stroke-width="2">
+                                <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                                <path d="M36 18c0-9.94-8.06-18-18-18">
+                                    <animateTransform
+                                        attributeName="transform"
+                                        type="rotate"
+                                        from="0 18 18"
+                                        to="360 18 18"
+                                        dur="1s"
+                                        repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <ul class="message js-message"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
