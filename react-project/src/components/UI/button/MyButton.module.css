@@ -1,0 +1,27 @@
+.my__button {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    border: 1px solid teal;
+    background-color: teal;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my__button:hover {
+    background-color: #008080; 
+    border-color: #008080;
+}
+
+.my__button:focus {
+    outline: none;
+    border-color: #20b2aa; 
+    box-shadow: 0 0 8px rgba(32, 178, 170, 0.5); 
+}
+
+.my__button:active {
+    background-color: #006666; 
+    box-shadow: none;
+}

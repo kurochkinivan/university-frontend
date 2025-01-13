@@ -1,0 +1,10 @@
+.errorMessage {
+  background-color: #ff4d4d;  /* Красный фон */
+  color: white;  /* Белый текст */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}

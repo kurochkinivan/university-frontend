@@ -1,0 +1,8 @@
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    row-gap: 3rem;
+    padding: 2rem 1rem;
+}

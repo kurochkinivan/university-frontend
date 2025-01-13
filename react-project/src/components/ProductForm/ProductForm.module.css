@@ -1,0 +1,23 @@
+.product__form {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .product__form {
+        max-width: 800px;
+    }
+}
+@media (max-width: 900px) {
+    .product__form {
+        max-width: 500px;
+    }
+}
+@media (max-width: 600px) {
+    .product__form {
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,23 @@
+.my__input {
+    padding: 5px 15px;
+    border-radius: 1rem;
+    border: 1px solid teal;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my__input:hover {
+    border-color: #008080; 
+}
+
+.my__input:focus {
+    border-color: #20b2aa; 
+    box-shadow: 0 0 8px rgba(32, 178, 170, 0.5); 
+}
+
+.my__input::placeholder {
+    color: #a0a0a0; 
+    font-style: italic;
+}
+
