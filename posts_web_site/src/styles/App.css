@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#root {
+    --teal-light: #80cbc4;
+    --teal-medium: #4db6ac;
+    --teal-classic: #008080;
+    --teal-dark: #006666;
+    --teal-soft: #b2dfdb;
+    --teal-vibrant: #00bfa5;
+    --font-body: 'Roboto', sans-serif;
+    --font-heading: 'Merriweather', serif;
+}

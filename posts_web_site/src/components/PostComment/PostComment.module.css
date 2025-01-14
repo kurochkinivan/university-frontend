@@ -1,0 +1,28 @@
+.post__comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0.5rem;
+}
+
+.post__comment {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    gap: 0.7rem;
+    border: 1px solid var(--teal-medium);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.comment__author {
+    display: flex;
+    gap: 0.3rem;
+    color: var(--teal-dark);
+}
+
+.comment__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
